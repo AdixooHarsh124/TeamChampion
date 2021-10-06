@@ -1,0 +1,72 @@
+
+.wc{
+content: "";
+/* position: absolute;
+display: inline-block;
+bottom: 371px;
+left: 14%;
+transform: translate(-50%,-50%); */
+/* height: 1px; */
+width: 18%;
+}
+.mc{
+    content: "";
+    /* position:absolute;
+    display: inline-block;
+    bottom: 371px;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+    height: 1px; */
+    width: 18%;
+}
+
+.bags{
+    content: "";
+    /* position: absolute;
+    bottom: 371px;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    height: 1px; */
+    width: 10%;
+}
+.shows{
+    content: "";
+    /* position: absolute;
+    bottom: 371px;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    
+    height: 1px; */
+    width: 11%;
+}
+.accessories{
+    content: "";
+    /* position: absolute;
+    bottom: 350px;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    height: 1px; */
+    width: 14%;
+} 
+.coll{
+    content: "";
+    /* position: absolute;
+    bottom: 371px;
+    left: 90%;
+    transform: translate(-50%,-50%);*/
+    height: 1%; 
+    width: 12%;
+} 
+ .pages{
+    content: "";
+    /* position: absolute;
+    bottom: 371px;
+    left: 105%;
+    transform: translate(-50%,-50%);
+    height: 1px; */
+    width: 8%;
+} 
+.margin{
+              margin-top: 18px;
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- logo -->
+  <!-- <link rel="icon" type="image/png" href="/images/fav_icon.png"/> -->
+  <!-- <link rel="icon" type="image/png" href="/assets/images/fav_icon.png" />
+  <title>Yaari</title> -->
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- ///// Owl Slider Css ///// -->
+  <!-- <link rel="stylesheet" href="/assets/css/owl.carousel.min.css"> -->
+  <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> -->
+
+  <!-- Style CSS -->
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+
+
+<body>
+  
+  <div class="top_profile_crt_lg_sec py-3 px-0">
+    <div class="container-fluid">
+      <div class="top_profile_crt_on_rgt d-flex flex-wrap float-right align-items-center">
+        <div class="top_profile_main float-left px-3">
+          <div class="dropdown top_profile_main_drpdwn">
+            <button mat-button [matMenuTriggerFor]="menu" class="dropdown-toggle text-left d-flex" type="button"
+              id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <!-- <img class="d-block float-left img-fluid mr-2 my-auto" src="/assets/images/profile_default.svg" width="40"
+                height="40"> -->
+              <img class="d-block float-left img-fluid mr-2 my-auto" src="/assets/images/profile_default.svg" width="40"
+                height="40">
+              <span class="d-block float-left">
+                <span class="font-400 font-14">Hello, Sign in</span>
+                <br>
+                <span class="font-600 font-16">Your Account</span>
+              </span>
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <mat-menu #menu="matMenu">
+                <a mat-menu-item class="dropdown-item my-2 d-inline-block font-16 text-center btn-theme-border"
+                  routerLink="/login">
+                  signin
+                </a>
+                <span mat-menu-item class="my-2 d-inline-block text-center w-100">
+                  Don't have an account?
+                </span>
+                <a mat-menu-item class="dropdown-item my-2 d-inline-block font-16 text-center btn-theme"
+                  href="create_account.html">
+                  Create Account
+                </a>
+              </mat-menu>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>  
+
+
+
+</body>
+<!-- Blank -->
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- ////////// Owl Slider JS ////// -->
+<!-- <script src="/assets/js/owl.carousel.min.js"></script> -->
+
+<script>
+
+  ////  Header Banners OWL
+
+  $('.owl-carousel-header-banners').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  });
+
+  ////  Blog list OWL
+
+  $('.owl-carousel-blog-list').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+
+  // Mega Menu
+
+  $(document).ready(function () {
+    "use strict";
+    $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+    $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+    $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">&nbsp;</a>");
+    $(".menu > ul > li").hover(function (e) {
+      if ($(window).width() > 991) {
+        $(this).children("ul").stop(true, false).fadeToggle(150);
+        e.preventDefault();
+      }
+    });
+    $(".menu > ul > li").click(function () {
+      if ($(window).width() <= 991) {
+        $(this).children("ul").fadeToggle(150);
+      }
+    });
+    $(".menu-mobile").click(function (e) {
+      $(".menu > ul").toggleClass('show-on-mobile');
+      e.preventDefault();
+    });
+  });
+  $(window).resize(function () {
+    $(".menu > ul > li").children("ul").hide();
+    $(".menu > ul").removeClass('show-on-mobile');
+  });
+
+</script>
+
+
+</html>

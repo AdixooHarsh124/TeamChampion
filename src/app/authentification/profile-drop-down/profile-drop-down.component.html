@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- logo -->
+    <!-- <link rel="icon" type="image/png" href="/images/fav_icon.png"/> -->
+    <!-- <link rel="icon" type="image/png" href="/assets/images/fav_icon.png"/>
+    <title>Yaari</title> -->
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ///// Owl Slider Css ///// -->
+    <!-- <link rel="stylesheet" href="/assets/css/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> 
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+<body>
+
+  <!-- profile DropDown -->
+      <div class="top_profile_main float-left px-3">
+        <div class="dropdown top_profile_main_drpdwn top_profile_main_drpdwn_on_login">
+          <button mat-button [matMenuTriggerFor]="menu"  class="dropdown-toggle text-left d-flex" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="top_profile_main_drpdwn_on_login_img d-block float-left img-fluid mr-2 my-auto">
+              <img  class="img-fluid" src="/assets/images/user_img.png">
+            </div>
+            <span class="d-block float-left">
+              <span class="font-400 font-14">Hello,</span>
+              <br>
+              <span class="font-600 font-16">Pooja Verma</span>
+            </span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <mat-menu #menu="matMenu">
+            <a mat-menu-item class="dropdown-item font-400 font-16" href="javaScript:void(0)">
+              Your Profile
+            </a>
+            <a mat-menu-item class="dropdown-item font-400 font-16" href="javaScript:void(0)">
+              Your Wishlist
+            </a>
+            <a mat-menu-item class="dropdown-item font-400 font-16" href="contact_us.html">
+              Contact Us
+            </a>
+            <a mat-menu-item class="dropdown-item border-0 font-400 font-16 text-danger" href="javaScript:void(0)">
+              Logout
+            </a>
+          </mat-menu>
+          </div>
+        </div>
+      </div>
+  
+     
+    
+
+
+
+<!-- Blank -->
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- ////////// Owl Slider JS ////// -->
+<!-- <script src="/assets/js/owl.carousel.min.js"></script> -->
+
+<script>
+     
+////  Header Banners OWL
+
+$('.owl-carousel-header-banners').owlCarousel({
+  loop:true,
+  margin:0,
+  nav:false,
+  responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:1
+    },
+    1000:{
+        items:1
+    }
+  }
+});
+    
+////  Blog list OWL
+
+$('.owl-carousel-blog-list').owlCarousel({
+  loop:true,
+  margin:30,
+  nav:false,
+  responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:2
+    },
+    1000:{
+        items:3
+    }
+  }
+});
+
+// Mega Menu
+
+$(document).ready(function() {
+  "use strict";
+  $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+  $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+  $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">&nbsp;</a>");
+  $(".menu > ul > li").hover(function(e) {
+    if ($(window).width() > 991) {
+      $(this).children("ul").stop(true, false).fadeToggle(150);
+      e.preventDefault();
+    }
+  });
+  $(".menu > ul > li").click(function() {
+    if ($(window).width() <= 991) {
+      $(this).children("ul").fadeToggle(150);
+    }
+  });
+  $(".menu-mobile").click(function(e) {
+    $(".menu > ul").toggleClass('show-on-mobile');
+    e.preventDefault();
+  });
+});
+$(window).resize(function() {
+  $(".menu > ul > li").children("ul").hide();
+  $(".menu > ul").removeClass('show-on-mobile');
+});
+
+</script> 
+
+
+</html>

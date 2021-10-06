@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+  <a mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" href="#"
+    class="nav-link--megamenu" style="background-color: #f3f3f3;">
+    Pages
+    <span class="material-icons nav_links_btm_arrow">expand_more</span>
+  </a>
+  <ul class="nav-link--megamenu-sub-lg">
+    <mat-menu #menu="matMenu">
+      <li mat-menu-item><a href="#" class="nav-link--megamenu">About</a></li>
+      <li mat-menu-item><a href="#" class="nav-link--megamenu">Contact</a></li>
+      <li mat-menu-item><a href="faqs.html" class="nav-link--megamenu">FAQ</a></li>
+      <li mat-menu-item><a href="blogs.html" class="nav-link--megamenu border-0">Blogs</a></li>
+    </mat-menu>
+  </ul>
+  
+  </body>
+
+
+  </html>
